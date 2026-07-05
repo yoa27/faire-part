@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Literata:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-serif: "Literata", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Custom Palette from Artisanal Wedding System design */
+  --color-primary: #974400;
+  --color-primary-container: #bb5808;
+  --color-on-primary: #ffffff;
+  --color-secondary: #556435;
+  --color-secondary-container: #d6e7ac;
+  --color-on-secondary-container: #5a6839;
+  --color-surface: #faf9f6;
+  --color-surface-container: #efeeeb;
+  --color-surface-container-low: #f4f3f1;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #1a1c1a;
+  --color-on-surface-variant: #564338;
+  --color-outline: #8a7266;
+  --color-outline-variant: #ddc1b3;
+}
+
+/* Custom Tactical and Organic Styles */
+.paper-grain {
+  background-color: #faf9f6;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  position: relative;
+}
+
+.paper-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.015);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.felt-grain {
+  background-color: #f4f3f1;
+  background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+}
+
+.torn-edge {
+  mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 Q5,5 10,0 T20,0 T30,0 T40,0 T50,0 T60,0 T70,0 T80,0 T90,0 T100,0 L100,100 Q95,95 90,100 T80,100 T70,100 T60,100 T50,100 T40,100 T30,100 T20,100 T10,100 T0,100 Z" fill="black"/></svg>');
+  mask-size: 100% 100%;
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 Q5,5 10,0 T20,0 T30,0 T40,0 T50,0 T60,0 T70,0 T80,0 T90,0 T100,0 L100,100 Q95,95 90,100 T80,100 T70,100 T60,100 T50,100 T40,100 T30,100 T20,100 T10,100 T0,100 Z" fill="black"/></svg>');
+  -webkit-mask-size: 100% 100%;
+}
+
+.sketchy-border {
+  border: 1.5px solid #8a7266;
+  border-radius: 4px;
+  box-shadow: 2px 2px 0px 0px rgba(26, 28, 26, 0.1);
+}
+
+.hard-shadow {
+  box-shadow: 4px 4px 0px 0px rgba(26, 28, 26, 0.08);
+}
+
+.stamp-confirmed {
+  border: 4px solid #974400;
+  color: #974400;
+  padding: 4px 12px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.8;
+  mix-blend-mode: multiply;
+  transform: rotate(-15deg);
+}
+
+.stamp-confirmed-small {
+  border: 2px solid #556435;
+  color: #556435;
+  padding: 2px 8px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  display: inline-block;
+  opacity: 0.8;
+  transform: rotate(-3deg);
+}
+
+.stamp-pending-small {
+  border: 2px solid #974400;
+  color: #974400;
+  padding: 2px 8px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  display: inline-block;
+  opacity: 0.8;
+  transform: rotate(2deg);
+}
+
+.hand-drawn-underline {
+  border-bottom: 2px solid #974400;
+  border-radius: 100% 0% 100% 0% / 0% 100% 0% 100%;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #ddc1b3;
+  border-radius: 10px;
+}
